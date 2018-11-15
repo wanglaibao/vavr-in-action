@@ -32,7 +32,20 @@ public class TupleTest {
         Tuple8<String,String,String,String,String,String,String,String> tuple81 = tuple8.map(
                 ((s, s2, s3, s4, s5, s6, s7, s8) -> Tuple.of(s.toUpperCase(),s2.toUpperCase(),s3.toUpperCase(),s4.toUpperCase(),s5.toUpperCase(),s6.toUpperCase(),s7.toUpperCase(),s8.toUpperCase()))
         );
-
         tuple81.toSeq().forEach(System.out::println);
+
+        System.out.println();
+
+        Tuple8<String,String,String,String,String,String,String,String> tuple82 = tuple8.map(
+                s1 -> s1.toLowerCase(),
+                s2 -> s2.toLowerCase(),
+                s3 -> s3.toLowerCase(),
+                s4 -> s4.toLowerCase(),
+                s5 -> s5.toLowerCase(),
+                s6 -> s6.toLowerCase(),
+                s7 -> s7.toLowerCase(),
+                s8 -> s8.toLowerCase()
+        );
+        tuple82.toSeq().forEach(System.out::println);
     }
 }
